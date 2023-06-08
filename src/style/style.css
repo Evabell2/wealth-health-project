@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #2f2f2f;
+}
+body .header header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 5px 0;
+  background: #e91e63;
+}
+body .header header a {
+  text-decoration: none;
+  color: white;
+}
+body .header header a:not(:nth-of-type(2)) {
+  transform: scale(1);
+  transition: transform 400ms;
+}
+body .header header a:not(:nth-of-type(2)):hover {
+  transform: scale(0.9);
+}
+body .header header a:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 30px;
+}
+body .header h1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 44.4px - 509.4px);
+  margin: 0;
+  background: url("../assets/nature-wallpaper-g9127fa572_1920.jpg") center no-repeat;
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+body .header h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+body .header h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto;
+  background: #e91e63;
+}
+body #form {
+  width: 55%;
+  margin: 0 auto;
+  padding: 5% 0 10%;
+}
+body #form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 15px;
+}
+body #form form input {
+  padding: 10px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+}
+body #form form input::-moz-placeholder {
+  color: black;
+}
+body #form form input::placeholder {
+  color: black;
+}
+body #form form .react-datepicker-wrapper {
+  width: calc(48% + 5px);
+}
+body #form form > input:nth-of-type(1), body #form form > input:nth-of-type(2), body #form form > input:nth-of-type(3), body #form form > input:nth-of-type(4) {
+  width: calc(48% - 15px);
+}
+body #form form fieldset {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  width: 100%;
+  color: white;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+body #form form fieldset legend {
+  display: none;
+}
+body #form form fieldset input {
+  width: 23%;
+}
+body #form form fieldset .css-b62m3t-container {
+  width: 25% !important;
+  color: black !important;
+}
+body #form form fieldset .css-b62m3t-container div {
+  color: black !important;
+  font-size: 14px;
+}
+body #form form fieldset .css-b62m3t-container div#react-select-2-placeholder {
+  color: black !important;
+  font-size: 14px;
+}
+body #form form div {
+  color: white;
+}
+body #form form div.department {
+  display: flex;
+  align-items: center;
+}
+body #form form div.department label {
+  margin-right: 20px;
+}
+body #form form div.department .css-b62m3t-container {
+  color: black !important;
+}
+body #form form div.department .css-b62m3t-container div {
+  color: black !important;
+  font-size: 14px;
+}
+body #form form div.department .css-b62m3t-container div#react-select-2-placeholder {
+  color: black !important;
+  font-size: 14px;
+}
+body #form form button {
+  float: right;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #e91e63;
+  color: white;
+  transform: scale(1);
+  transition: transform 400ms;
+  cursor: pointer;
+}
+body #form form button:hover {
+  transform: scale(0.9);
+}
+body #btn_search {
+  margin-bottom: 10px;
+}
+body #btn_search::before {
+  content: "Search :";
+  margin-right: 10px;
+  color: white;
+  font-size: 14px;
+}
+body #btn_search input {
+  height: 25px;
+}
+body #table {
+  padding: 5% 10%;
+}
+body #table .sc-fbJfA {
+  font-weight: bold;
+  font-size: 14px;
+}
+body #table .sc-kFuwaP {
+  opacity: 1;
+}
+body #table .rdt_Pagination {
+  padding-top: 30px;
+  color: black;
+  font-weight: bold;
+}
+body #table .rdt_Pagination button svg {
+  fill: #e91e63 !important;
+}/*# sourceMappingURL=style.css.map */
