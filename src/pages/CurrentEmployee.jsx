@@ -97,7 +97,7 @@ function CurrentEmployee() {
     return (
         <div id='table'>
             <div id='btn_search'>
-            <input type="text" value={searchText} onChange={searchFilter} />
+                <input type="text" value={searchText} onChange={searchFilter} />
             </div>
             <DataTable
                 columns={columns}

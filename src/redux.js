@@ -3,6 +3,8 @@ import { createSlice, combineReducers } from "@reduxjs/toolkit"
 const createEmployeeSlice = createSlice ({
     name: "createEmployee",
     initialState: {
+        formErrors: {},
+        emptyFields: [],
         displayModale: false,
         birthDate: null,
         startDate: null,
@@ -19,9 +21,14 @@ const createEmployeeSlice = createSlice ({
             zipCode: "",
         },
         employees: [],
-
     },
     reducers: {
+        setFormErrors: (state, action) => {
+            state.formErrors = action.payload
+        },
+        setEmptyFields: (state, action) => {
+            state.emptyFields = action.payload;
+        },
         modale: (state) => {
             state.displayModale = !state.displayModale
         },
@@ -47,22 +54,13 @@ const createEmployeeSlice = createSlice ({
         addEmployee: (state, action) => {
             const employee = { ...action.payload };
             state.employees.push(employee);
-            state.formData = { // Réinitialisez le formulaire après l'ajout de l'employé
-              firstName: "",
-              lastName: "",
-              dateOfBirth: null,
-              startDate: null,
-              department: "",
-              street: "",
-              city: "",
-              state: "",
-              zipCode: "",
-            };
         },
     },
 })
 
 export const {
+    setFormErrors,
+    setEmptyFields,
     modale,
     setBirthDate,
     setStartDate,
